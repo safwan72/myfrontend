@@ -5,8 +5,10 @@ const ModalProject = (props) => {
   return (
     <div style={{ backgroundColor: "black" }}>
       <Modal isOpen={props.openmodal} style={{ backgroundColor: "black" }}>
-        <h3 className="my-3 text-center ">{props.project.projectName}</h3>
-        <ModalBody>{props.project.projectDescription}</ModalBody>
+        <h3 className="mt-5 mb-3 text-center ">{props.project.projectName}</h3>
+        <ModalBody style={{ color: "#b3aead", fontWeight: "600" }}>
+          {props.project.projectDescription}
+        </ModalBody>
         <div className="container modalbtnclas">
           <a
             href={props.project.projectUrl}
