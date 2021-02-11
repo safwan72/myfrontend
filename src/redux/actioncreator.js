@@ -16,7 +16,7 @@ export const projectsloadsuccess = (projects) => {
 
 export const projectsloader = () => (dispatch) => {
   dispatch(projectsloading());
-  Axios.get(`${process.env.PROJECTURL}`)
+  Axios.get(`${process.env.REACT_APP_PROJECTURL}`)
     .then((response) => {
       dispatch(projectsloadsuccess(response.data));
     })
@@ -47,7 +47,7 @@ export const contactsubmitter = (values) => (dispatch) => {
   };
   dispatch(submitter(true));
 
-  Axios.post(`${process.env.CONTACTURL}`, values, header)
+  Axios.post(`${process.env.REACT_APP_CONTACTURL}`, values, header)
     .then((response) => {
       dispatch(submitter(false));
       dispatch(submitmessage("Thanks For Submitting Your FeedBack"));
