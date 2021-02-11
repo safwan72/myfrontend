@@ -1,0 +1,24 @@
+.progressbar {
+    border-radius: 3px;
+    border: 1px solid rgba(32, 32, 32, 0.753);
+	position: relative;
+    height: 7px;
+    background: rgba(32, 32, 32, 0.753);
+	width: 100%;
+}
+
+.progress-done {
+    background: #FDC830;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	border-radius: 7px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 5px;
+	opacity: 0;
+    transition: 1s ease 0.3s;
+    font-size: 1rem;
+}

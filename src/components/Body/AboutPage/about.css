@@ -1,0 +1,23 @@
+
+.about-us h1{
+    color:var(--base);
+  }
+  
+  .about-us .about-text{
+    padding: 0 2rem;
+    color:rgba(168, 162, 71, 0.767);
+    letter-spacing: 0.18rem;
+    word-spacing: 0.3rem;
+  }
+  
+  .about-us .map{
+    margin: 2rem 0;
+    padding:1.2rem 0;
+  }
+  .about-us .map h4{
+    color:var(--base);
+  }
+  
+  
+  
+  

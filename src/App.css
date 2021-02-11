@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  html {
+    scrollbar-color: rgba(209, 184, 70, 0.92)  rgb(255, 208, 0);
+    scrollbar-width: 0.85rem;
+    scroll-behavior: smooth;
+    scrollbar-arrow-color: rgb(255, 208, 0);
+}
+  :root {
+    --base: rgb(226, 178, 19);
+    --white: rgb(216, 214, 193);
+    --black:rgb(17, 17, 17);
+  }
+  body{
+    background-color: var(--black);
+  }
+
+

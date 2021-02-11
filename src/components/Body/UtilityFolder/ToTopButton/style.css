@@ -1,0 +1,11 @@
+.totopbtn {
+    border: none;
+    cursor: pointer;
+    position:fixed;
+    outline: none !important;
+    bottom:15px;
+    right: 15px;
+    background:transparent;
+    color: var(--base);
+    display:none;
+  }

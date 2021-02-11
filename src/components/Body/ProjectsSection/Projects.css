@@ -1,0 +1,139 @@
+
+.projectext{
+  font-size: 5rem;
+}
+
+.portfoliomainsection {
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .portfoilomainpics{
+    position: relative;
+  }
+  .portfoilomainpics img {
+    transition: all ease-in-out 400ms;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .portfoilomainpics:hover .portfolio-overlay{
+  opacity: 1;
+  cursor: pointer;
+  
+  }
+  .portfoilomainpics .portfolio-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000000;
+  }
+  
+  .portfoilomainpics .portfolioname{
+    color: var(--base);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .btncategroy{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+ 
+  
+  .portfolio{
+    margin: 3rem 0;
+    padding: 2rem 0;
+  }
+  .portfolio h1{
+    color: var(--base);
+  }
+  
+  .portfolio .card{
+    background: transparent;
+  }
+  .portfolio .card-title{
+    color: var(--base);
+    font-weight: normal;
+  }
+  
+.btncategroy .btn{
+  color: var(--base);
+  background: transparent;
+  border:1px solid var(--base);
+  transition: transform 350ms ease-in-out;
+  outline: none;
+  margin-bottom: 0.8rem;
+}
+
+.btncategroy .btn:hover{
+  background-color: var(--base);
+  color: var(--black);
+  transform: scale(1.04);
+}
+
+@media screen and (max-width: 970px) {
+  .projectext{
+    font-size: 4.25rem;
+  }
+  .btncategroy .btn{
+    margin-right: 1.15rem;
+    }
+  
+}
+@media screen and (max-width: 770px) {
+  .portfoliomainsection {
+    grid-template-columns: auto;
+  }
+  .btncategroy .btn{
+    font-size: 1.1rem;
+    }
+  .projectext{
+    font-size: 3.5rem;
+  }
+  
+}
+@media screen and (max-width: 530px) {
+  .projectext{
+    font-size: 2.85rem;
+  }
+  .btncategroy{
+    flex-direction: column;
+    }
+  .btncategroy .btn{
+    width: 70%;
+    margin: auto;
+    }
+  
+}
+
+@media screen and (max-width: 400px) {
+  .btncategroy .btn{
+  font-size: 0.9rem;
+  }
+  .projectext{
+    font-size: 2.3rem;
+  }
+}
+
