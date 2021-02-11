@@ -10,12 +10,12 @@ const ProjectComponent = (props) => {
     });
   }, []);
   return (
-    <a href={props.projectUrl} target="blank">
       <div
         className="portfoilomainpics"
         data-aos="fade-zoom-in"
         data-aos-easing="ease-in-sine"
         data-aos-delay="800"
+        onClick={()=>props.openmodalclick(props)}
       >
         <img
           src={props.projectImage}
@@ -26,7 +26,6 @@ const ProjectComponent = (props) => {
           <p className="portfolioname">{props.projectName}</p>
         </div>
       </div>
-    </a>
   );
 };
 

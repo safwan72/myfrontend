@@ -1,0 +1,42 @@
+.modal {
+  background-color: transparent;
+}
+.modal-content {
+  background-color: var(--black) !important;
+  color: var(--base);
+}
+.modalbtnclas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.modalbtnclas .btnvisit {
+  margin: 1.2rem;
+  background-color: var(--base);
+  border: none;
+  outline: none;
+  color: var(--black);
+  transition: color 800ms ease-in-out;
+}
+.modalbtnclas .btnvisit:hover {
+  background-color: var(--black);
+  border: 2px solid var(--base);
+  color: var(--base);
+}
+
+.modalbtnclas .btnclose {
+  margin: 1.2rem;
+  background-color: var(--black);
+  border: 2px solid var(--base);
+  outline: none;
+  color: var(--base);
+  transition: color 800ms ease-in-out;
+}
+
+.modalbtnclas .btnclose:hover {
+  background-color: var(--base);
+  border: none;
+  color: var(--black);
+}

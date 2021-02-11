@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import ProjectComponent from "./ProjectComponent";
 import Spinner from "../UtilityFolder/Spinner/Spinner";
 import ProjectCategorizer from "./ProjectCategorizer";
+import ModalProject from "./ModalProject/ModalProject";
 const mapStateToProps = (state) => {
   return {
     projects: state.projects,
@@ -21,16 +22,28 @@ const mapDispatchToProps = (dispatch) => {
 class Projects extends Component {
   state = {
     filteredProjects: [],
+    selectedproject: [],
+    modalOpen: false,
   };
 
   componentDidMount() {
     document.title = "Safwan | Projects";
     this.props.projectsloader();
-    console.log(this.props.projects);
     this.setState({
       filteredProjects: this.props.projects,
     });
   }
+  openmodalclick = (project) => {
+    this.setState({
+      selectedproject: project,
+      modalOpen: !this.state.modalOpen,
+    });
+  };
+  tooglebtn = () => {
+    this.setState({
+      modalOpen: false,
+    });
+  };
   handleclick = (e) => {
     this.setState({
       filteredProjects: this.props.projects,
@@ -51,13 +64,31 @@ class Projects extends Component {
     }
   };
   render() {
-    let projects = null;
+    let projects = null,
+      modalproject = null;
     if (this.props.projectsloading) {
       projects = <Spinner />;
     }
+
+    if (this.state.selectedproject.length !== 0 && this.state.modalOpen) {
+      modalproject = (
+        <ModalProject
+          project={this.state.selectedproject}
+          openmodal={this.state.modalOpen}
+          tooglebtn={this.tooglebtn}
+        />
+      );
+    }
+
     if (this.props.projects.length !== 0) {
       projects = this.state.filteredProjects.map((item) => {
-        return <ProjectComponent {...item} key={item.id} />;
+        return (
+          <ProjectComponent
+            {...item}
+            key={item.id}
+            openmodalclick={this.openmodalclick}
+          />
+        );
       });
     }
     return (
@@ -66,6 +97,10 @@ class Projects extends Component {
         <ProjectCategorizer handleclick={this.handleclick} />
         <div className="container">
           <div className="portfoliomainsection">{projects}</div>
+          <div className='container'>
+          {modalproject}
+          </div>
+
         </div>
       </div>
     );
